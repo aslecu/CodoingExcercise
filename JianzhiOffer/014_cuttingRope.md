@@ -16,11 +16,11 @@ class Solution {
         max[1] = 1;
         max[2] = 1;
         int i = 3;
-        int maxTemp;
+        int temp;
         while(i<=n){
-            maxTemp = 0;
+            max[i] = 0;
             for(int j=1;j<=i-1;j++){
-                int temp = j * Math.max(i-j, max[i-j]);
+                temp = j * Math.max(i-j, max[i-j]);
                 if(temp > max[i]){
                     max[i] = temp;
                 }
